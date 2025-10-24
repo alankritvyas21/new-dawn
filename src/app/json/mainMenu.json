@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Bedroom",
+    "image": "assets/images/bedroom.png",
+    "route": "/bedroom",
+    "category": "Living",
+    "unlocked": true
+  },
+  {
+    "id": 2,
+    "title": "Kitchen",
+    "image": "assets/images/kitchen.jpg",
+    "route": "/kitchen",
+    "category": "Living",
+    "unlocked": true
+  },
+  {
+    "id": 3,
+    "title": "Bathroom",
+    "image": "assets/images/bathroom.jpg",
+    "route": "/bathroom",
+    "category": "Living",
+    "unlocked": true
+  },
+  {
+    "id": 4,
+    "title": "Garage",
+    "image": "assets/images/garage.jpg",
+    "route": "/garage",
+    "category": "Workshop",
+    "unlocked": false
+  },
+  {
+    "id": 5,
+    "title": "Garden",
+    "image": "assets/images/garden.jpg",
+    "route": "/garden",
+    "category": "Survival",
+    "unlocked": false
+  },
+  {
+    "id": 6,
+    "title": "Basement",
+    "image": "assets/images/basement.jpg",
+    "route": "/basement",
+    "category": "Shelter",
+    "unlocked": false
+  },
+  {
+    "id": 7,
+    "title": "Outside",
+    "image": "assets/images/outside.jpg",
+    "route": "/outside",
+    "category": "Exploration",
+    "unlocked": true
+  }
+]
+  

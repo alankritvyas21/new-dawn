@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "Sleep",
+        "action": "sleep",
+        "unlocked": true,
+        "category": "Rest",
+        "energyRestore": 100,
+        "healthRestore": 50,
+        "timeRequired": 8
+    },
+    {
+        "id": 2,
+        "title": "Nap",
+        "action": "nap",
+        "unlocked": true,
+        "category": "Rest",
+        "energyRestore": 30,
+        "timeRequired": 2
+    },
+    {
+        "id": 3,
+        "title": "Read Book",
+        "action": "readBook",
+        "unlocked": true,
+        "category": "Learning",
+        "knowledgeGain": 15,
+        "stressReduction": 25
+    },
+    {
+        "id": 4,
+        "title": "Exercise",
+        "action": "exercise",
+        "unlocked": true,
+        "category": "Training",
+        "strengthGain": 1,
+        "energyCost": 20
+    }
+]

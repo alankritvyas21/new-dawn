@@ -1,0 +1,45 @@
+<div class="game-intro-container">
+  <div class="content">
+    <div class="game-intro-image">
+      <img [src]="configService.getImageUrl() + 'logo1.png'" alt="New Dawn Logo">
+    </div>
+
+    <h1 class="title">New Dawn: <span>Beyond the Fallout</span></h1>
+
+    <div class="intro">
+      <p>Year 2147.</p>
+      <p>The world ended decades ago. Nuclear fire consumed the skies, and the surface was drowned in radiation. Only a
+        few survived — sealed away in underground bunkers built for the end of days.</p>
+      <p>You were one of them.</p>
+      <p>Years passed in silence beneath layers of concrete and steel. The air recyclers hummed, the walls groaned, and
+        the memories of sunlight began to fade.</p>
+      <p>When the radiation meters finally blinked green, you decided to open the hatch and face what remained.</p>
+      <p>The world outside was… not what you remembered.</p>
+      <p>Ruins stretched across the horizon, but in the distance, faint lights glimmered through the dust clouds — a
+        sign of life.</p>
+      <p>They call it <strong>New Dawn City</strong> — built by the survivors who refused to give up. Walled and
+        shielded, powered by scavenged tech, it's the only place where hope still flickers.</p>
+      <p>But survival comes at a cost. The air beyond the city's shield is still thick with radiation. Only the rich and
+        powerful can afford <strong>Radi-Clear Pills</strong>, a rare miracle made by the mysterious NovaGen Industries
+        — a company that vanished when the bombs fell.</p>
+      <p>You can't afford the pills. Not yet.</p>
+      <p>Exhausted from the journey, you find shelter in a small abandoned house just outside New Dawn's walls.</p>
+      <p>Inside:</p>
+      <p class="bullet">A rusted bed frame</p>
+      <p class="bullet">An empty kitchen</p>
+      <p class="bullet">A broken shower leaking brown water</p>
+      <p>It's not much. But it's safe — for now.</p>
+      <p>From this house, your story begins. The wasteland still breathes, and secrets of NovaGen still linger in the
+        ruins.</p>
+    </div>
+
+    <div class="intro">
+      <p>Enter your name:</p>
+      <input type="text" formControlName="playerName" placeholder="John Doe" class="name-input" />
+      <p *ngIf="nameForm.get('playerName')?.value === ''" class="warning">Name cannot be empty, defaulting to John Doe
+      </p>
+    </div>
+
+    <button class="next" (click)="goToMainMenu()">Next</button>
+  </div>
+</div>

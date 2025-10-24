@@ -1,0 +1,142 @@
+.game-intro-container {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #1b1b1b 0%, #0a0a0a 100%);
+  color: #e5e5e5;
+  overflow: hidden;
+
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1.5s ease forwards;
+
+    .game-intro-image {
+      margin-bottom: 25px;
+
+      img {
+        width: 280px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(255, 180, 71, 0.6);
+      }
+    }
+
+    .title {
+      font-size: 3rem;
+      color: #ffb347;
+      text-shadow: 0 0 15px #ff9933;
+      margin-bottom: 20px;
+
+      span {
+        color: #f0e68c;
+        text-shadow: 0 0 10px #f0e68c;
+      }
+    }
+
+    .intro {
+      text-align: left;
+      color: #ddd;
+      font-size: 1.15rem;
+      line-height: 1.75;
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      .bullet {
+        position: relative;
+        padding-left: 1.5em;
+        margin-bottom: 0.8em;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: #ffb347;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .next {
+        margin-top: 30px;
+        padding: 12px 28px;
+        font-size: 1.2rem;
+        color: #fff;
+        background: #ff7f50;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 0 15px rgba(255, 127, 80, 0.6);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+            background: #ff6347;
+            box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
+        }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-intro-container {
+    .content {
+      .game-intro-image {
+        padding: 20px;
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    .intro {
+      padding: 20px;
+    }
+
+    .how-to-play {
+      padding: 20px;
+    }
+  }
+}
+
+.name-input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffb347;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #111;
+  background: #fff;
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem 0;
+}
+
+.warning {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}

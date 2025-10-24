@@ -1,0 +1,10 @@
+{
+    "playerProgress": {
+        "currentLevel": 1,
+        "experience": 0,
+        "unlockedFeatures": [
+            1,
+            2
+        ]
+    }
+}

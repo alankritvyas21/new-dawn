@@ -1,0 +1,33 @@
+<div class="main-menu-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="main-menu-header">
+          <h1 class="menu-title">{{ title }}</h1>
+          <p class="menu-subtitle">{{ subtitle }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="menu-grid d-flex justify-content-center flex-wrap">
+          <div *ngFor="let item of menuItems" class="menu-item col-12 col-md-6 col-lg-3 mb-4"
+            (click)="navigateToRoute(item.route)">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img [src]="item.image" [alt]="item.title" class="img-fluid">
+                <!-- <div class="image-overlay">
+                  <div class="category-badge">{{ item.category }}</div>
+                </div> -->
+              </div>
+              <div class="menu-content">
+                <h3 class="menu-item-title">{{ item.title }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

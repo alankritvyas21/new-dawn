@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Home",
+    "image": "assets/images/home.jpg",
+    "route": "/main-menu",
+    "category": "Home",
+    "unlocked": true
+  },
+  {
+    "id": 2,
+    "title": "Explore",
+    "image": "assets/images/explore.jpg",
+    "route": "/explore",
+    "category": "Exploration",
+    "unlocked": true
+  },
+  {
+    "id": 3,
+    "title": "Forest",
+    "image": "assets/images/forest.jpg",
+    "route": "/forest",
+    "category": "Forest",
+    "unlocked": true
+  },
+  {
+    "id": 4,
+    "title": "Water Source",
+    "image": "assets/images/water-source.jpg",
+    "route": "/water-source",
+    "category": "Survival",
+    "unlocked": true
+  },
+  {
+    "id": 5,
+    "title": "Enemy Camp",
+    "image": "assets/images/enemy-camp.jpg",
+    "route": "/enemy-camp",
+    "category": "Danger",
+    "unlocked": false
+  },
+  {
+    "id": 6,
+    "title": "Safe House",
+    "image": "assets/images/safe-house.jpg",
+    "route": "/safe-house",
+    "category": "Shelter",
+    "unlocked": false
+  },
+  {
+    "id": 7,
+    "title": "Scrapyard",
+    "image": "assets/images/scrapyard.jpg",
+    "route": "/scrapyard",
+    "category": "Resources",
+    "unlocked": false
+  },
+  {
+    "id": 8,
+    "title": "Highway",
+    "image": "assets/images/highway.jpg",
+    "route": "/highway",
+    "category": "Travel",
+    "unlocked": true
+  }
+]

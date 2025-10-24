@@ -1,0 +1,14 @@
+:host {
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 80px;
+    --sidebar-width-mobile: 100%;
+    --sidebar-z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    :host {
+        --sidebar-width: 100%;
+        --sidebar-width-collapsed: 20%;
+        --sidebar-width-mobile: 100%;
+    }
+}

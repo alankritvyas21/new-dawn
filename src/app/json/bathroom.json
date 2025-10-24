@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Shower",
+        "action": "shower",
+        "unlocked": true,
+        "category": "Hygiene",
+        "energyCost": 10,
+        "radiationReduction": 20
+    },
+    {
+        "id": 2,
+        "title": "Bath",
+        "action": "bath",
+        "unlocked": true,
+        "category": "Hygiene",
+        "energyCost": 15,
+        "healthRestore": 30
+    },
+    {
+        "id": 3,
+        "title": "Use Toilet",
+        "action": "useToilet",
+        "unlocked": true,
+        "category": "Basic",
+        "energyCost": 2,
+        "comfortRestore": 10
+    }
+]

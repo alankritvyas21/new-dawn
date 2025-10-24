@@ -1,0 +1,106 @@
+<div class="room-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="room-header">
+          <button class="back-btn" (click)="goBack()">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <h1 class="room-title">{{ roomTitle }}</h1>
+          <p class="room-subtitle">{{ roomSubtitle }}</p>
+          <img [src]="roomImage" class="room-image" [alt]="roomTitle">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="actions-grid d-flex flex-wrap justify-content-center">
+          <div *ngFor="let action of availableActions" 
+               [class]="'action-item ' + gridColumns + ' mb-4'"
+               (click)="performAction(action.action)">
+            <div class="action-card">
+              <div class="action-content">
+                <h3 class="action-title">{{ action.title }}</h3>
+
+                <div class="action-stats">
+                  <!-- Energy Cost -->
+                  <div class="stat" *ngIf="action.energyCost">
+                    <i class="fas fa-bolt"></i>
+                    <span>Energy: -{{ action.energyCost }}</span>
+                  </div>
+                  
+                  <!-- Energy Restore -->
+                  <div class="stat" *ngIf="action.energyRestore">
+                    <i class="fas fa-bolt"></i>
+                    <span>Energy: +{{ action.energyRestore }}</span>
+                  </div>
+                  
+                  <!-- Health Restore -->
+                  <div class="stat" *ngIf="action.healthRestore">
+                    <i class="fas fa-heart"></i>
+                    <span>Health: +{{ action.healthRestore }}</span>
+                  </div>
+                  
+                  <!-- Health Bonus -->
+                  <div class="stat" *ngIf="action.healthBonus">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health Bonus: +{{ action.healthBonus }}</span>
+                  </div>
+                  
+                  <!-- Radiation Reduction -->
+                  <div class="stat" *ngIf="action.radiationReduction">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Radiation: -{{ action.radiationReduction }}%</span>
+                  </div>
+                  
+                  <!-- Stress Reduction -->
+                  <div class="stat" *ngIf="action.stressReduction">
+                    <i class="fas fa-brain"></i>
+                    <span>Stress: -{{ action.stressReduction }}%</span>
+                  </div>
+                  
+                  <!-- Comfort Restore -->
+                  <div class="stat" *ngIf="action.comfortRestore">
+                    <i class="fas fa-smile"></i>
+                    <span>Comfort: +{{ action.comfortRestore }}</span>
+                  </div>
+                  
+                  <!-- Sickness Prevention -->
+                  <div class="stat" *ngIf="action.sicknessPrevention">
+                    <i class="fas fa-shield-virus"></i>
+                    <span>Immunity: +{{ action.sicknessPrevention }}%</span>
+                  </div>
+                  
+                  <!-- Time Required -->
+                  <div class="stat" *ngIf="action.timeRequired">
+                    <i class="fas fa-clock"></i>
+                    <span>Time: {{ action.timeRequired }}h</span>
+                  </div>
+                  
+                  <!-- Strength Gain -->
+                  <div class="stat" *ngIf="action.strengthGain">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Strength: +{{ action.strengthGain }}</span>
+                  </div>
+                  
+                  <!-- Knowledge Gain -->
+                  <div class="stat" *ngIf="action.knowledgeGain">
+                    <i class="fas fa-book"></i>
+                    <span>Knowledge: +{{ action.knowledgeGain }}</span>
+                  </div>
+                  
+                  <!-- Bread Quantity -->
+                  <div class="stat" *ngIf="action.breadQuantity">
+                    <i class="fas fa-bread-slice"></i>
+                    <span>Bread: +{{ action.breadQuantity }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

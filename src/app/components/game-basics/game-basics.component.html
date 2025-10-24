@@ -1,0 +1,35 @@
+<div class="game-basics-container">  
+    <div class="content">
+        <div class="game-basics-image">
+          <img [src]="configService.getImageUrl() + 'logo1.png'" alt="Game Basics">
+        </div>
+      <h1 class="title">New Dawn: <span>Beyond the Fallout</span></h1>
+  
+      <p class="intro">
+        You've survived the nuclear apocalypse. The wasteland awaits.  
+        Learn the basics before stepping into the unknown.
+      </p>
+  
+      <section class="how-to-play">
+        <h2 class="how-to-play-title">How to Play</h2>
+        <ul>
+          <li>💬 <strong>Choice-Based Gameplay:</strong> Every decision shapes your fate.</li>
+          <li>⚖️ <strong>Consequences Matter:</strong> Your actions influence your survival and ending.</li>
+          <li>📦 <strong>Resource Management:</strong> Keep track of your food, water, and pills.</li>
+          <li>🧬 <strong>Explore and Discover:</strong> Uncover secrets of NovaGen and the wasteland.</li>
+        </ul>
+      </section>
+  
+      <section class="how-to-play">
+        <h2 class="how-to-play-title">Survivor Tips</h2>
+        <ul>
+          <li>Conserve your resources — scarcity defines survival.</li>
+          <li>Not everyone can be trusted.</li>
+          <li>Sometimes doing nothing changes everything.</li>
+        </ul>
+      </section>
+  
+      <button class="start-btn" (click)="startGame()">Start Game</button>
+    </div>
+  </div>
+  

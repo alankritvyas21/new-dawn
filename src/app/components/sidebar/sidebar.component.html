@@ -1,0 +1,69 @@
+<div class="d-flex sidebar-container">
+    <div class="sidebar d-flex flex-column flex-shrink-0 position-fixed" [class.collapsed]="isCollapsed">
+        <button class="toggle-btn" (click)="toggleSidebar()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="p-4">
+            <img [src]="configService.getImageUrl() + 'logo-small.png'" alt="Logo" class="logo">
+        </div>
+
+        <div class="time-section mt-3 px-3 text-center">
+            <div class="time-label hide-on-collapse">Time</div>
+            <div class="time-display">{{ this.sharedService.getFormattedTime() }}</div>
+        </div>
+
+        <div class="energy-section p-3">
+            <div class="energy-label hide-on-collapse">Energy</div>
+            <div class="energy-bar-outer">
+                <div class="energy-bar-inner" [ngStyle]="{
+              width: this.sharedService.playerData.energyLevel + '%',
+              background: energyColor
+            }"></div>
+            </div>
+            <div class="energy-percent hide-on-collapse">{{ this.sharedService.playerData.energyLevel }}</div>
+            <div class="health-label hide-on-collapse">Health</div>
+            <div class="health-bar-outer">
+                <div class="health-bar-inner" [ngStyle]="{
+                  width: this.sharedService.playerData.health + '%',
+                  background: healthColor
+                }"></div>
+            </div>
+            <div class="health-percent hide-on-collapse">{{ this.sharedService.playerData.health }}</div>
+        </div>
+
+
+        <div class="button-container mt-auto p-3 p-lg-4">
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#restartModal">
+                <i class="fas fa-redo me-2"></i>
+                <span class="hide-on-collapse">Restart</span>
+            </button>
+            <button class="btn btn-secondary mt-2">
+                <i class="fas fa-save me-2"></i>
+                <span class="hide-on-collapse">Save</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content" [class.collapsed]="isCollapsed">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-warning">
+        <div class="modal-header border-bottom border-warning">
+          <h5 class="modal-title" id="restartModalLabel">Confirm Restart</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to restart the game? All progress will be lost.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-warning" (click)="navigateHome()" data-bs-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>

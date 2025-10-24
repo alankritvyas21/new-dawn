@@ -1,0 +1,207 @@
+.main-menu-container {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #1b1b1b 0%, #0a0a0a 100%);
+  color: #e5e5e5;
+  font-family: 'Orbitron', sans-serif;
+  padding: 40px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/wasteland-bg.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    filter: blur(2px);
+    z-index: 0; 
+  }
+  
+  .container-fluid {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.main-menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  .menu-title {
+    font-size: 3.5rem;
+    color: #ffb347;
+    text-shadow: 0 0 20px #ff9933;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .menu-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.menu-grid {
+  gap: 1.5rem;
+}
+
+.menu-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+    
+    .menu-card {
+      box-shadow: 0 15px 35px rgba(255, 179, 71, 0.3);
+      border-color: #ffb347;
+    }
+    
+    .menu-image img {
+      transform: scale(1.1);
+    }
+    
+    .menu-item-title {
+      color: #ffb347;
+      text-shadow: 0 0 15px rgba(255, 179, 71, 0.8);
+    }
+    
+    .menu-item-action {
+      background: linear-gradient(90deg, #ffb347, #ff9933);
+      color: #111;
+      transform: translateX(5px);
+    }
+  }
+}
+
+.menu-card {
+  background: rgba(27, 27, 27, 0.9);
+  border: 2px solid rgba(255, 179, 71, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  
+  &:hover {
+    border-color: #ffb347;
+    box-shadow: 0 15px 35px rgba(255, 179, 71, 0.3);
+  }
+}
+
+.menu-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 179, 71, 0.2), rgba(240, 230, 140, 0.1));
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .category-badge {
+    background: linear-gradient(90deg, #ffb347, #ff9933);
+    color: #111;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(255, 179, 71, 0.4);
+  }
+}
+
+.menu-content {
+  padding: 10px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  
+  .menu-item-title {
+    color: #f0e68c;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item-description {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .menu-item-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 179, 71, 0.1);
+    border: 1px solid rgba(255, 179, 71, 0.3);
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+    
+    .action-text {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+    
+    i {
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff9933;
+  }
+  to {
+    text-shadow: 0 0 30px #ff9933, 0 0 40px #ffb347;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-menu-header {
+    .menu-title {
+      font-size: 32px;
+    }
+  }
+  
+  .menu-image {
+    height: 200px;
+  }
+  
+  .menu-content {
+    padding: 1rem;
+  }
+}

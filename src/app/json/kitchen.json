@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "title": "Eat Food",
+        "action": "eatFood",
+        "unlocked": true,
+        "category": "Nutrition",
+        "energyRestore": 40,
+        "healthRestore": 20
+    },
+    {
+        "id": 2,
+        "title": "Eat Snacks",
+        "action": "eatSnacks",
+        "unlocked": true,
+        "category": "Quick",
+        "energyRestore": 15
+    }
+]
